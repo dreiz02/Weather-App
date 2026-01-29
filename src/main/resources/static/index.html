@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/618d4f1d54.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <div class="weather-container">
+        <div class="title">
+            <h1>WEATHER FORECAST</h1>
+            <p>Select one of the cities to "view"</p>
+        </div>
+        <div class="options">
+            <button class="city-select">TORONTO</button>
+            <button class="city-select">MONTREAL</button>
+            <button class="city-select">CALGARY</button>
+            <button class="city-select">OTTAWA</button>
+            <button class="city-select">EDMONTON</button>
+            <button class="city-select">VANCOUVER</button>
+            <button class="city-select">WINNIPEG</button>
+            <button class="city-select">MISSISSAUGA</button>
+            <button class="city-select">BRAMPTON</button>
+            <button class="city-select">HAMILTON</button>
+        </div>
+        <div class="filter-section">
+            <form class="weather-form" id="weatherForm">
+              <input type="text" class="city-input" placeholder="Search City">
+              <button type="submit">SUBMIT</button>
+            </form>
+            <div class="display-container">
+                <div class="display-card" id="displayCard"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
