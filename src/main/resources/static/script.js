@@ -12,8 +12,7 @@ form.addEventListener("submit", async (e) => {
   card.innerHTML = `<p class="loading-display">Loading...</p>`;
 
   try {
-    const geoUrl =
-      `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityQuery)}&count=1&language=en&format=json`;
+    const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityQuery)}&count=1&language=en&format=json`;
 
     const geoRes = await fetch(geoUrl);
     if (!geoRes.ok) throw new Error("Geocoding request failed");
@@ -27,12 +26,8 @@ form.addEventListener("submit", async (e) => {
     const place = geoData.results[0];
     const { name, admin1, country, latitude, longitude, timezone } = place;
 
-    const weatherUrl =
-      `https://api.open-meteo.com/v1/forecast` +
-      `?latitude=${latitude}` +
-      `&longitude=${longitude}` +
-      `&timezone=${encodeURIComponent(timezone)}` +
-      `&current=temperature_2m,wind_speed_10m`;
+    const weatherUrl =`https://api.open-meteo.com/v1/forecast` + `?latitude=${latitude}` + `&longitude=${longitude}` 
+                    + `&timezone=${encodeURIComponent(timezone)}` + `&current=temperature_2m,wind_speed_10m`;
 
     const weatherRes = await fetch(weatherUrl);
     if (!weatherRes.ok) throw new Error("Weather request failed");

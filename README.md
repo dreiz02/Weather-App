@@ -22,3 +22,9 @@ AI use declaration:
 Development Process
 	The assignment was developed iteratively
 	Multiple revisions were made after testing and debugging
+
+Part B:
+
+Notes:
+	- Accidentally misread the guidelines
+	- I completely created
